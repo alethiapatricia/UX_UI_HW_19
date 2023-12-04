@@ -1,0 +1,112 @@
+* {
+    font-family: 'DM Serif Display', serif;
+}
+.inline-block{
+    display: inline-block;
+    vertical-align: top;
+}
+.logo{
+    width: 23%;
+    padding: 1%;
+    text-align: center;
+    
+}
+nav{
+    width:70%;
+    padding: 1%;
+}
+ul{
+    width: 50%;
+    margin-left: auto;
+}
+.heroImg{
+    height: 600px;
+    padding: 25px;
+}
+.content{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+footer{
+    padding: center;
+    background-color: #c8e7de;
+ 
+}
+header{
+    padding: center;
+    background-color: #c8e7de;
+ 
+}
+footer > ul {
+    display: inline-block;
+    vertical-align: top;
+    padding: center;
+    
+}
+li {
+    border: 2px solid rgba(185, 146, 39, 0.956);
+    border-radius: 5px;
+    padding: 5px;
+    
+}
+.font-family{
+    font-family: 'DM Serif Display', serif;
+    font-size: large;
+}
+.font-family-h1{
+    font-family: 'DM Serif Display', serif;
+    font-size: x-large;
+}
+
+.mySkills > h1{
+    text-align: center;
+}
+
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.flexContainer > div{
+    width: 33%;
+    padding: 1%;
+    text-align: center;
+}
+.flexContainer > div> img{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.myWork > h1{
+    text-align: center;
+}
+.workGrid{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 30% 70%;
+}
+.workGrid > div{
+    padding: 5%;
+    text-align: center;
+}
+.workGrid > div> img{
+    width: 100%;
+    scale: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+  .flexContainer{
+    display: flex;
+    flex-direction: column;
+}
+.flexContainer > div{
+    width: 100%;
+    padding: 1%;
+    text-align: center;
+}
+.workGrid{
+    display: flex;
+    flex-direction: column;
+}
+}
