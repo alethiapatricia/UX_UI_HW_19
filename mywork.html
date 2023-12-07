@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="CSS/modal.css">
+<link rel="stylesheet" href="CSS/styles.css">
+
 </head>
 <body>
     <style>
@@ -26,64 +25,106 @@
             </ul>
         </nav>
     </header>
-      
+<section class="myWork">
+    <h1>My Work</h1>
+    <div class="workGrid">
+        <div>
+            <img src="images/skill1.png" alt="">
+        </div>
+        <div>
+            <h3>Carolina Waterfowl Rescue</h3>
+            <p>Non-profit website redesign.</p>
+            <button id="myButton">Live View Desktop</button>
+            <button id="myButtonMOB">Live View Mobile</button>
+        </div>
+        <div>
+            <img id="thoughtfulimg" src="images/skill2.png" alt="">
+            <!-- <img id="thoughtfulimg" src="images/THOUGHTFUL SIGN IN.gif" alt=""> -->
+        </div>
+        <div>
+            <h3>Thoughtful</h3>
+            <p>Product Design.</p>
+            <button id="myButton2">Live View</button>
 
-      
-        <section class="myWork">
-            <h1>My Work</h1>
-            <div class="workGrid">
-                <div>
-                    <img src="images/skill1.png" alt="">
-                </div>
-                <div>
-                    <h3>Carolina Waterfowl Rescue</h3>
-                    <p>Non-profit website redesign.</p>
-                    <button>Project Info</button>
-                </div>
-                <div>
-                    <img id="thoughtfulimg" src="images/skill2.png" alt="">
-                    <!-- <img id="thoughtfulimg" src="images/THOUGHTFUL SIGN IN.gif" alt=""> -->
+        </div>
+        <div>
+            <img src="images/skill3.png" alt="">
 
+        </div>
+        <div>
+            <h3>U.S Department of Interior</h3>
+            <p>Goverment website redesign.</p>
+            <button id="myButton3">Live View Desktop</button>
+            <button id="myButton3MOB">Live View Mobile</button>
 
-                </div>
-                <div>
-                    <h3>Thoughtful</h3>
-                    <p>Product Design.</p>
-                    <button>Project Info</button>
+        </div>
+    </div>
+    <h3 style="text-align: center;">View all projects</h3>
+</section>
 
-                </div>
-                <div>
-                    <img src="images/skill3.png" alt="">
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
 
-                </div>
-                <div>
-                    <h3>U.S Department of Interior</h3>
-                    <p>Goverment website redesign.</p>
-                    <button>Project Info</button>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
 
-                </div>
-            </div>
-            <h3 style="text-align: center;">View all projects</h3>
-        </section>
-           <footer>
-                <ul>
-                    <li class="inline-block font-family"><a href="index.html">about</a></li>
-                    <li class="inline-block font-family"><a href="myskills.html">skills</a></li>
-                    <li class="inline-block font-family"><a href="mywork.html">work</a></li>
-                        <li class="inline-block font-family">contact</li>
-                </ul>
-            </footer>
-    <script>
-        $(document).ready(function(){
-            
-            $("#thoughtfulimg").hover(function(){
-                $(this).attr('src','images/THOUGHTFUL SIGN IN.gif');
-            }, function(){
-                $(this).attr('src','images/skill2.png');
-            });
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var button = document.getElementById("myButton")
+var buttonMOB = document.getElementById("myButtonMOB")
+var button2 = document.getElementById("myButton2")
+var button3 = document.getElementById("myButton3")
+var button3MOB = document.getElementById("myButton3MOB")
 
-        });
-    </script>
-    
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+button.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = "images/P1.gif";
+  captionText.innerHTML = "Carolina Waterfowl Rescue";
+}
+buttonMOB.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = "images/MOBP1.gif";
+  captionText.innerHTML = "Carolina Waterfowl Rescue";
+}
+button2.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = "images/P2.gif";
+  captionText.innerHTML = "Thoughtful";
+}
+button3.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = "images/P3.gif";
+  captionText.innerHTML = "U.S Department of Interior";
+}
+button3MOB.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = "images/P3MOB.gif";
+  captionText.innerHTML = "U.S Department of Interior";
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<footer>
+    <ul>
+        <li class="inline-block font-family"><a href="index.html">about</a></li>
+        <li class="inline-block font-family"><a href="myskills.html">skills</a></li>
+        <li class="inline-block font-family"><a href="mywork.html">work</a></li>
+            <li class="inline-block font-family">contact</li>
+    </ul>
+</footer>
+
 </body>
 </html>
